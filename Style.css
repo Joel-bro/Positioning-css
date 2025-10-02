@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;  /* ensures it works even on very small screens */
+  background: #f0f0f0;
+}
+
+.container {
+  position: relative;
+  width: 90vw;          /* more flexible width */
+  max-width: 600px;     /* don’t let it get too wide */
+  height: 60vh;
+  max-height: 400px;    /* keep it manageable */
+  background: white;
+  border: 2px solid #333;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+  border-radius: 10px;  /* optional: smooth corners */
+}
+
+.container div {
+  font-size: clamp(12px, 2vw, 18px); /* adjusts text size depending on screen */
+}
+
+.top-left {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}
+
+.top-right {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
